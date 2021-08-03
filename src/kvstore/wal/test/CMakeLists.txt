@@ -1,0 +1,74 @@
+nebula_add_test(
+    NAME
+        file_based_wal_test
+    SOURCES
+        FileBasedWalTest.cpp
+    OBJECTS
+        $<TARGET_OBJECTS:wal_obj>
+        $<TARGET_OBJECTS:disk_man_obj>
+        $<TARGET_OBJECTS:common_base_obj>
+        $<TARGET_OBJECTS:common_thread_obj>
+        $<TARGET_OBJECTS:common_fs_obj>
+        $<TARGET_OBJECTS:common_time_obj>
+        $<TARGET_OBJECTS:common_thread_obj>
+    LIBRARIES
+        gtest
+)
+
+nebula_add_test(
+    NAME
+        inmemory_log_buffer_test
+    SOURCES
+        InMemoryLogBufferTest.cpp
+        InMemoryLogBuffer.cpp
+    OBJECTS
+        $<TARGET_OBJECTS:wal_obj>
+        $<TARGET_OBJECTS:disk_man_obj>
+        $<TARGET_OBJECTS:common_base_obj>
+        $<TARGET_OBJECTS:common_fs_obj>
+        $<TARGET_OBJECTS:common_time_obj>
+        $<TARGET_OBJECTS:common_thread_obj>
+    LIBRARIES
+        gtest
+)
+
+nebula_add_test(
+    NAME
+        atomic_log_buffer_test
+    SOURCES
+        AtomicLogBufferTest.cpp
+    OBJECTS
+        $<TARGET_OBJECTS:common_base_obj>
+    LIBRARIES
+        gtest
+)
+
+nebula_add_executable(
+    NAME
+        log_bufferr_bm
+    SOURCES
+        LogBufferBenchmark.cpp
+        InMemoryLogBuffer.cpp
+    OBJECTS
+        $<TARGET_OBJECTS:common_base_obj>
+    LIBRARIES
+        follybenchmark
+        boost_regex
+)
+
+nebula_add_test(
+    NAME
+        wal_file_iter_test
+    SOURCES
+        WalFileIterTest.cpp
+    OBJECTS
+        $<TARGET_OBJECTS:wal_obj>
+        $<TARGET_OBJECTS:disk_man_obj>
+        $<TARGET_OBJECTS:common_base_obj>
+        $<TARGET_OBJECTS:common_thread_obj>
+        $<TARGET_OBJECTS:common_fs_obj>
+        $<TARGET_OBJECTS:common_time_obj>
+        $<TARGET_OBJECTS:common_thread_obj>
+    LIBRARIES
+        gtest
+)

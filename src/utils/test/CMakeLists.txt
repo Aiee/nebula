@@ -1,0 +1,50 @@
+nebula_add_test(
+    NAME
+        nebula_key_utils_test
+    SOURCES
+        NebulaKeyUtilsTest.cpp
+    OBJECTS
+        $<TARGET_OBJECTS:keyutils_obj>
+        $<TARGET_OBJECTS:common_time_obj>
+        $<TARGET_OBJECTS:common_base_obj>
+        $<TARGET_OBJECTS:common_datatypes_obj>
+        $<TARGET_OBJECTS:common_meta_thrift_obj>
+        $<TARGET_OBJECTS:common_common_thrift_obj>
+    LIBRARIES
+        gtest
+        ${THRIFT_LIBRARIES}
+)
+
+nebula_add_test(
+    NAME
+        index_key_utils_test
+    SOURCES
+        IndexKeyUtilsTest.cpp
+    OBJECTS
+        $<TARGET_OBJECTS:keyutils_obj>
+        $<TARGET_OBJECTS:common_time_obj>
+        $<TARGET_OBJECTS:common_base_obj>
+        $<TARGET_OBJECTS:common_datatypes_obj>
+        $<TARGET_OBJECTS:common_meta_thrift_obj>
+        $<TARGET_OBJECTS:common_common_thrift_obj>
+    LIBRARIES
+        gtest
+        ${THRIFT_LIBRARIES}
+)
+
+nebula_add_test(
+    NAME
+        operation_key_utils_test
+    SOURCES
+        OperationKeyUtilsTest.cpp
+    OBJECTS
+        $<TARGET_OBJECTS:keyutils_obj>
+        $<TARGET_OBJECTS:common_time_obj>
+        $<TARGET_OBJECTS:common_base_obj>
+        $<TARGET_OBJECTS:common_datatypes_obj>
+        $<TARGET_OBJECTS:common_meta_thrift_obj>
+        $<TARGET_OBJECTS:common_common_thrift_obj>
+    LIBRARIES
+        gtest
+        ${THRIFT_LIBRARIES}
+)
