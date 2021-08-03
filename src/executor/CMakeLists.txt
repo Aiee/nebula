@@ -1,0 +1,87 @@
+# Copyright (c) 2020 vesoft inc. All rights reserved.
+#
+# This source code is licensed under Apache 2.0 License,
+# attached with Common Clause Condition 1.0, found in the LICENSES directory.
+
+nebula_add_library(
+    executor_obj OBJECT
+    Executor.cpp
+    StorageAccessExecutor.cpp
+    logic/LoopExecutor.cpp
+    logic/PassThroughExecutor.cpp
+    logic/StartExecutor.cpp
+    logic/SelectExecutor.cpp
+    query/AggregateExecutor.cpp
+    query/DedupExecutor.cpp
+    query/FilterExecutor.cpp
+    query/GetEdgesExecutor.cpp
+    query/GetNeighborsExecutor.cpp
+    query/GetVerticesExecutor.cpp
+    query/IntersectExecutor.cpp
+    query/LimitExecutor.cpp
+    query/MinusExecutor.cpp
+    query/ProjectExecutor.cpp
+    query/UnwindExecutor.cpp
+    query/SortExecutor.cpp
+    query/TopNExecutor.cpp
+    query/IndexScanExecutor.cpp
+    query/SetExecutor.cpp
+    query/UnionExecutor.cpp
+    query/UnionAllVersionVarExecutor.cpp
+    query/DataCollectExecutor.cpp
+    query/JoinExecutor.cpp
+    query/LeftJoinExecutor.cpp
+    query/InnerJoinExecutor.cpp
+    query/IndexScanExecutor.cpp
+    query/AssignExecutor.cpp
+    algo/ConjunctPathExecutor.cpp
+    algo/BFSShortestPathExecutor.cpp
+    algo/ProduceSemiShortestPathExecutor.cpp
+    algo/ProduceAllPathsExecutor.cpp
+    algo/CartesianProductExecutor.cpp
+    algo/SubgraphExecutor.cpp
+    admin/SwitchSpaceExecutor.cpp
+    admin/CreateUserExecutor.cpp
+    admin/DropUserExecutor.cpp
+    admin/UpdateUserExecutor.cpp
+    admin/GrantRoleExecutor.cpp
+    admin/RevokeRoleExecutor.cpp
+    admin/ChangePasswordExecutor.cpp
+    admin/ListUserRolesExecutor.cpp
+    admin/ListUsersExecutor.cpp
+    admin/ListRolesExecutor.cpp
+    admin/SubmitJobExecutor.cpp
+    admin/BalanceExecutor.cpp
+    admin/StopBalanceExecutor.cpp
+    admin/ResetBalanceExecutor.cpp
+    admin/BalanceLeadersExecutor.cpp
+    admin/ShowBalanceExecutor.cpp
+    admin/ShowHostsExecutor.cpp
+    admin/SpaceExecutor.cpp
+    admin/SnapshotExecutor.cpp
+    admin/ListenerExecutor.cpp
+    admin/PartExecutor.cpp
+    admin/CharsetExecutor.cpp
+    admin/ShowStatsExecutor.cpp
+    admin/DownloadExecutor.cpp
+    admin/IngestExecutor.cpp
+    admin/ConfigExecutor.cpp
+    admin/GroupExecutor.cpp
+    admin/ZoneExecutor.cpp
+    admin/ShowTSClientsExecutor.cpp
+    admin/SignInTSServiceExecutor.cpp
+    admin/SignOutTSServiceExecutor.cpp
+    admin/SessionExecutor.cpp
+    admin/ShowQueriesExecutor.cpp
+    admin/KillQueryExecutor.cpp
+    maintain/TagExecutor.cpp
+    maintain/TagIndexExecutor.cpp
+    maintain/EdgeExecutor.cpp
+    maintain/EdgeIndexExecutor.cpp
+    maintain/FTIndexExecutor.cpp
+    mutate/InsertExecutor.cpp
+    mutate/DeleteExecutor.cpp
+    mutate/UpdateExecutor.cpp
+)
+
+nebula_add_subdirectory(test)
