@@ -21,7 +21,7 @@
 
 # What is Nebula Graph?
 
-**Nebula Graph** is an open-source graph database capable of hosting super large scale graphs with dozens of billions of vertices (nodes) and trillions of edges, with milliseconds of latency.
+**Nebula Graph** is an open-source graph database capable of hosting super large scale graphs with dozens of billions of vertices (nodes) and trillions of edges, with milliseconds of.
 
 Compared with other graph database solutions, **Nebula Graph** has the following advantages:
 
